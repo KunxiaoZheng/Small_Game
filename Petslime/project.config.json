@@ -1,0 +1,10 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx90485f2de4525c01",
+	"projectname": "Petslime",
+	"condition": {}
+}
