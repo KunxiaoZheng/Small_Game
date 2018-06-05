@@ -1,0 +1,15 @@
+<view class="slimeDisplay">
+  <text class="userinfo-nickname">test</text>
+</view>
+<view class="infoDisplay">
+  <switch bindchange='switchClicked'/>
+  <view class="switch" hidden="{{trainFlag ? true : false}}">
+    <text>锻炼</text>
+  </view>
+  <view hidden="{{trainFlag ? false : true}}">
+    <text>打工</text>
+  </view>
+</view>
+<view class="startButton">
+  <text class="userinfo-nickname">start button</text>
+</view>

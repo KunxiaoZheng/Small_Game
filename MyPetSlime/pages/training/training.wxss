@@ -1,0 +1,27 @@
+/* pages/training/training.wxss */
+
+page {
+  height: 100%;
+}
+
+.slimeDisplay {
+  height: 30%;
+  border: solid;
+  background-color: powderblue;
+}
+
+.infoDisplay {
+  height: 55%;
+  border-style: solid;
+}
+
+.startButton {
+  /*TODO: fix the boarder go out of the screen*/
+  height: 15%;
+  border-style: solid;
+}
+
+.switch {
+  height: 100%;
+  border-style: solid;
+}
