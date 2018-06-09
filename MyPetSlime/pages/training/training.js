@@ -1,15 +1,15 @@
 // pages/training/training.js
 
-var rainFlag=false;
+var rainFlag = false;
 
 Page({
   data: {
-    trainFlag:false
+    trainFlag: false
   },
-  
+
 
   switchClicked: function (e) {
-    this.setData ({
+    this.setData({
       trainFlag: e.detail.value
     })
   }
