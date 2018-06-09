@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/Inventory/inventory",
     "pages/main/main",
+    "pages/Inventory/inventory",
     "pages/training/training"
   ],
   "window": {

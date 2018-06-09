@@ -2,18 +2,18 @@
   <text align="center">Inventory</text>
 </view>
 
-<view class="row" id="floatbar">
+<view class="row" id="floatbar" style="height:25%;">
   <view class="column1" style="background-color:#ccc;">
-
+    图/装备
 
   </view>
   <view class="column1" style="background-color:#ddd;">
-
+    装备/图
 
   </view>
 </view>
 
-<view class="row" style="background-color:#aaa;">
+<view class="row" style="background-color:#aaa;height: 50%">
   <view class="column2" >
 
 

@@ -5,58 +5,58 @@ page{
     width:100%;
     box-sizing: border-box;
 }
-
+.row {
+  box-sizing: border-box;
+}
 /* Create two equal columns that floats next to each other */
 .column1 {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 50%;
+    height: 100%;
   box-sizing: border-box;
 }
 .column2 {
-    float: right;
-    width: 50%;
-    padding: 10px;
-    height: 50%;
+  float: right;
+  width: 50%;
+  padding: 10px;
+  height: 100%;
   box-sizing: border-box;
 }
 /* Clear floats after the columns */
-.row:after {
+.row::after {
     content: "";
     display: table;
-    clear: both;    
-    height:70%;
-    
+    clear: both;
+}
+button {
+  display: inline-block;
+  width: 50%;
+  border: none;
+  border-radius: 0;
 }
 .button1{
-	padding: 15px 80px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    background-color: green;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 9px darkgreen;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: green;
+  box-shadow: 0 9px darkgreen;
 }
 .button2{
-	padding: 15px 80px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    background-color: red;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 9px darkred;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  box-shadow: 0 9px darkred;
 }    
 
 .button1:active {
-  background-color: green;
+  background-color: darkgreen;
   box-shadow: 0 5px darkgreen;
   transform: translateY(4px);
 }
 .button2:active {
-  background-color: red;
+  background-color: darkred;
   box-shadow: 0 5px darkred;
   transform: translateY(4px);
 }
