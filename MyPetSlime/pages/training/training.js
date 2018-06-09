@@ -1,4 +1,7 @@
 // pages/training/training.js
+
+var rainFlag=false;
+
 Page({
   data: {
     trainFlag:false
