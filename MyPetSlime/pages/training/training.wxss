@@ -1,27 +1,45 @@
 /* pages/training/training.wxss */
 
 page {
-  height: 100%;
+  height:100%;
+  background-color: powderblue;
 }
 
 .slimeDisplay {
   height: 30%;
-  border: solid;
-  background-color: powderblue;
 }
 
-.infoDisplay {
-  height: 55%;
-  border-style: solid;
+.display {
+  height: 58%;  
+  background-color:	white;
 }
 
 .startButton {
-  /*TODO: fix the boarder go out of the screen*/
-  height: 15%;
+  /*TODO: fix the boarder go out of the screen*/  
+  height: 12%;  
+  background-color:	white;
+}
+
+.toggerBar {
+  height: 12%;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.infoDisplay {
+  height: 88%;  
+  text-align: center;
+  border-style: solid;
+  border-color: red;
+  border-radius: 5px;
+}
+
+.display .infoDisplay .left {  
+  grid-area: left;
   border-style: solid;
 }
 
-.switch {
-  height: 100%;
+.display .infoDisplay .right {  
+  grid-area: right;
   border-style: solid;
 }
