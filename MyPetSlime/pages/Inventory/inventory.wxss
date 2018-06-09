@@ -1,7 +1,13 @@
 
 
 page{
+    height:100%;
+    width:100%;
     box-sizing: border-box;
+}
+
+.row {
+  box-sizing: border-box;
 }
 
 
@@ -9,20 +15,21 @@ page{
     float: left;
     width: 50%;
     padding: 10px;
+    height: 100%;
+  box-sizing: border-box;
 }
 .column2 {
+  float: right;
   width: 50%;
   padding: 10px;
   height: 100%;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 
-.row:after {
-=======
-/* Clear floats after the columns */
+
+
 .row::after {
->>>>>>> cb93a8d1da01efc59054c42dbf78fef6b9cc8085
+
     content: "";
     display: table;
     clear: both;
