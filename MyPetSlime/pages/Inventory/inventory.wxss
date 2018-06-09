@@ -5,10 +5,12 @@ page{
     width:100%;
     box-sizing: border-box;
 }
+
 .row {
   box-sizing: border-box;
 }
-/* Create two equal columns that floats next to each other */
+
+
 .column1 {
     float: left;
     width: 50%;
@@ -23,8 +25,11 @@ page{
   height: 100%;
   box-sizing: border-box;
 }
-/* Clear floats after the columns */
+
+
+
 .row::after {
+
     content: "";
     display: table;
     clear: both;
