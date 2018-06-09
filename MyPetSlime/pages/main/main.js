@@ -51,5 +51,10 @@ Page({
     wx.navigateTo({
       url: '../training/training',
     })
+  },
+  navToInventory: function () {
+    wx.navigateTo({
+      url: '../Inventory/inventory',
+    })
   }
 })

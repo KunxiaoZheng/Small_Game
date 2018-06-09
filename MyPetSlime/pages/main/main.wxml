@@ -4,7 +4,7 @@
 </view>
 <view class="btnHolder {{isExpand?'expand':''}}">
   <view class="btn" bindtap="navToTrain">打工</view>
-  <view class="btn">按钮</view>
+  <view class="btn" bindtap="navToInventory">背包</view>
   <view class="btn">按钮</view>
   <view class="btn">按钮</view>
 </view>
