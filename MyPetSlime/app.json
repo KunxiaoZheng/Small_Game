@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/training/training",
-    "pages/index/index"
+    "pages/main/main",
+    "pages/training/training"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Slime",
     "navigationBarTextStyle": "black"
   }
 }

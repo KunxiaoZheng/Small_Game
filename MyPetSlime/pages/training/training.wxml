@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <view class="slimeDisplay">
   <text class="userinfo-nickname">slime display here</text>
 </view>
@@ -24,3 +25,7 @@
 <view class="startButton">
   <button>start button</button>
 </view>
+=======
+<!--pages/training/training.wxml-->
+<text>pages/training/training.wxml</text>
+>>>>>>> Stashed changes
