@@ -9,49 +9,52 @@ page{
     float: left;
     width: 50%;
     padding: 10px;
-    height: 250px;
 }
 .column2 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 400px;
+  width: 50%;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 .row:after {
+=======
+/* Clear floats after the columns */
+.row::after {
+>>>>>>> cb93a8d1da01efc59054c42dbf78fef6b9cc8085
     content: "";
     display: table;
     clear: both;
-    
+}
+button {
+  display: inline-block;
+  width: 50%;
+  border: none;
+  border-radius: 0;
 }
 .button1{
-	padding: 15px 210px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    background-color: green;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 9px darkgreen;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: green;
+  box-shadow: 0 9px darkgreen;
 }
 .button2{
-	padding: 15px 202px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    background-color: red;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 9px darkred;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  box-shadow: 0 9px darkred;
 }    
 
 .button1:active {
-  background-color: green;
+  background-color: darkgreen;
   box-shadow: 0 5px darkgreen;
   transform: translateY(4px);
 }
 .button2:active {
-  background-color: red;
+  background-color: darkred;
   box-shadow: 0 5px darkred;
   transform: translateY(4px);
 }
