@@ -1,5 +1,5 @@
 <view class="slimeDisplay">
-  <text class="userinfo-nickname">slime display here</text>
+  <canvas canvas-id="myCanvas" />
 </view>
 <view class="display">
   <view class="toggerBar">

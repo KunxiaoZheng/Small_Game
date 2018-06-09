@@ -46,5 +46,10 @@ Page({
     this.setData({
       'isExpand': !this.data.isExpand
     })
+  },
+  navToTrain:function(){
+    wx.navigateTo({
+      url: '../training/training',
+    })
   }
 })
