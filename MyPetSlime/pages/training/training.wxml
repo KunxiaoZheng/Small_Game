@@ -8,18 +8,13 @@
     <text hidden="{{trainFlag ? false : true}}">锻炼</text>
   </view>
   <view class="infoDisplay" hidden="{{trainFlag ? true : false}}">
-    <text>打工</text>
+    
     <view style="height:78%;box-sizing: border-box;">
-      <view class="left">
-        <text> left side    </text>
-      </view>
-      <view class="right">
-        <text> right side    </text>
-      </view>
+      
     </view>
   </view>
   <view class="infoDisplay" hidden="{{trainFlag ? false : true}}">
-    <text>锻炼</text>
+    
     <view style="height:78%;box-sizing: border-box;">
       <view class="left">
         <text> left side    </text>
