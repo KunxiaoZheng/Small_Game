@@ -1,0 +1,57 @@
+
+
+page{
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 250px;
+}
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 400px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+.button1{
+	padding: 15px 210px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 9px darkgreen;
+}
+.button2{
+	padding: 15px 202px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 9px darkred;
+}    
+
+.button1:active {
+  background-color: green;
+  box-shadow: 0 5px darkgreen;
+  transform: translateY(4px);
+}
+.button2:active {
+  background-color: red;
+  box-shadow: 0 5px darkred;
+  transform: translateY(4px);
+}

@@ -1,0 +1,25 @@
+<view class="row" id="floatbar" style="background-color:#aaa;">
+  <text align="center">Inventory</text>
+</view>
+
+<view class="row" id="floatbar">
+  <view class="column1" style="background-color:#ccc;">
+
+
+  </view>
+  <view class="column1" style="background-color:#ddd;">
+
+
+  </view>
+</view>
+
+<view class="row" style="background-color:#aaa;">
+  <view class="column2" >
+
+
+  </view>
+
+
+</view>
+<button class="button1">Equip</button>
+<button class="button2">Unequip</button>
