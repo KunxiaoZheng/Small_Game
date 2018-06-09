@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /* pages/training/training.wxss */
 
 page {
@@ -44,6 +43,3 @@ page {
   grid-area: right;
   border-style: solid;
 }
-=======
-/* pages/training/training.wxss */
->>>>>>> Stashed changes
