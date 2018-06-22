@@ -26,5 +26,5 @@
   </view>
 </view>
 <view class="startButton">
-  <button>start button</button>
+  <button bindtap="startButton">start button</button>
 </view>

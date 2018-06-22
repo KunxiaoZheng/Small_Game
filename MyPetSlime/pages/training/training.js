@@ -48,5 +48,14 @@ Page({
 
     ctx.draw()
 
+  },
+  startButton: function () {
+    const requestTask = wx.request({
+      url: 'http://localhost:3000/', 
+      method: 'get',
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
   }
 })

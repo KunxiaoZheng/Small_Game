@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/Inventory/inventory",
-    "pages/training/training"
+    "pages/training/training",
+    "pages/Inventory/inventory"
   ],
   "window": {
     "backgroundTextStyle": "light",
