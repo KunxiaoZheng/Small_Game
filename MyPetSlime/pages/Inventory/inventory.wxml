@@ -7,13 +7,13 @@
     图/装备
 
   </view>
-  <view class="column1" style="background-color:#ddd;">
+  <view class="column2" style="background-color:#ddd;">
     装备/图
 
   </view>
 </view>
 
-<view class="row" style="background-color:#aaa;height: 50%">
+<view class="row" style="background-color:#aaa;height: 55%">
   <view class="column2" >
 
 
