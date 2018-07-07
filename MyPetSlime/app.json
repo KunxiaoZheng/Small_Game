@@ -1,13 +1,15 @@
 {
   "pages": [
-    "pages/main/main",
     "pages/training/training",
-    "pages/inventory/inventory"
+    "pages/main/main",
+    "pages/inventory/inventory",
+    "pages/map/map",
+    "pages/battle/battle"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Slime",
+    "navigationBarTitleText": "MyPetSlime",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -16,8 +18,8 @@
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "images/Battle_Selected.png",
-        "iconPath": "images/Battle.png",
+        "selectedIconPath": "images/Home_Selected.png",
+        "iconPath": "images/Home.png",
         "pagePath": "pages/main/main",
         "text": "首页"
       },
@@ -28,10 +30,22 @@
         "text": "打工"
       },
       {
+        "selectedIconPath": "images/Battle_Selected.png",
+        "iconPath": "images/Battle.png",
+        "pagePath": "pages/battle/battle",
+        "text": "战斗"
+      },
+      {
         "selectedIconPath": "images/Inventory_Selected.png",
         "iconPath": "images/Inventory.png",
         "pagePath": "pages/inventory/inventory",
         "text": "背包"
+      },
+      {
+        "selectedIconPath": "images/Map_Selected.png",
+        "iconPath": "images/Map.png",
+        "pagePath": "pages/map/map",
+        "text": "地图"
       }
     ]
   }

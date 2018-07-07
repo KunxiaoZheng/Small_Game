@@ -6,8 +6,6 @@ let eyesAnimation = require('../../animation/eyes_sleep.js')
 
 Page({
   data: {
-    width: 0,
-    height: 0,
     pixelSize: 0,
     startTop: 0,
     startLeft: 0,
