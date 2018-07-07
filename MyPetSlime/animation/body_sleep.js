@@ -41,12 +41,18 @@ let frame2 = [[12, 1], [13, 1], [14, 1], [15, 1], [16, 1], [17, 1], [18, 1], [19
 [8, 19], [9, 19], [25, 19], [26, 19],
 [10, 20], [11, 20], [12, 20], [13, 20], [14, 20], [15, 20], [16, 20], [17, 20], [18, 20], [19, 20], [20, 20], [21, 20], [22, 20], [23, 20], [24, 20]]
 let animation = [frame1,
-  frame2]
+                 frame1,
+                 frame1,
+                 frame2,
+                 frame2]
 
 let eyesFrame1 = [[9, 11], [21, 11]]
 let eyesFrame2 = [[9, 12], [21, 12]]
 let eyes = [eyesFrame1,
-  eyesFrame2]
+            eyesFrame1,
+            eyesFrame1,
+            eyesFrame2,
+            eyesFrame2]
 
 module.exports = {
   animation,

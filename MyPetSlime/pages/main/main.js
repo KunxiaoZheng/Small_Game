@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-let bodyAnimation = require('../../animation/body_idle.js')
-let eyesAnimation = require('../../animation/eyes_sleep.js')
+let bodyAnimation = require('../../animation/body_sleep.js')
+let eyesAnimation = require('../../animation/eyes_happy.js')
 
 Page({
   data: {
@@ -10,7 +10,9 @@ Page({
     height: 0,
     pixelSize: 0,
     startTop: 0,
-    startLeft: 0
+    startLeft: 0,
+    bodyAnimationFrameMax: 0,
+    eyesAnimationFrameMax: 0
   },
   onLoad: function (options) {
     var that = this
@@ -28,17 +30,19 @@ Page({
     this.setData({
       pixelSize: pixelSize,
       startLeft: pixelSize,
-      startTop: pixelSize
+      startTop: pixelSize,
+      bodyAnimationFrameMax: bodyAnimation.animation.length,
+      eyesAnimationFrameMax: eyesAnimation.animationLeft.length
     })
     let bodyFrame = 0
-    let bodyAnimationFrameMax = bodyAnimation.animation.length
     let eyesFrame = 0
-    let eyesAnimationFrameMax = eyesAnimation.animationLeft.length
     const ctx = wx.createCanvasContext('myCanvas')
     ctx.setFillStyle('black')
     ctx.clearRect(0, 0, 500, 500)
     let _this = this
     setInterval(function() {
+      bodyFrame = bodyFrame % _this.data.bodyAnimationFrameMax
+      eyesFrame = eyesFrame % _this.data.eyesAnimationFrameMax
       // draw body
       _this.drawBody(ctx, bodyFrame)
 
@@ -46,9 +50,9 @@ Page({
       _this.drawEyes(ctx, eyesFrame, bodyFrame)
       
       ctx.draw()
-      bodyFrame = (bodyFrame + 1) % bodyAnimationFrameMax
-      eyesFrame = (eyesFrame + 1) % eyesAnimationFrameMax
-    }, 900)
+      bodyFrame = bodyFrame + 1
+      eyesFrame = eyesFrame + 1 
+    }, 600)
   },
   drawBody: function (ctx, bodyFrame) {
     let body = bodyAnimation.animation[bodyFrame]
@@ -69,5 +73,22 @@ Page({
     for (let j = 0; j < eyeRight.length; j++) {
       ctx.fillRect((this.data.startLeft + (eyesPos[1][0] + eyeRight[j][0])) * pixelSize, (this.data.startTop + (eyesPos[1][1] + eyeRight[j][1])) * pixelSize, pixelSize, pixelSize)
     }
+  },
+  activate: function() {
+    bodyAnimation = require('../../animation/body_idle.js')
+    eyesAnimation = require('../../animation/eyes_idle.js')
+    this.setData({
+      bodyAnimationFrameMax: bodyAnimation.animation.length,
+      eyesAnimationFrameMax: eyesAnimation.animationLeft.length
+    })
+    let _this = this
+    setTimeout(function() {
+      bodyAnimation = require('../../animation/body_sleep.js')
+      eyesAnimation = require('../../animation/eyes_sleep.js')
+      _this.setData({
+        bodyAnimationFrameMax: bodyAnimation.animation.length,
+        eyesAnimationFrameMax: eyesAnimation.animationLeft.length
+      })
+    }, 3000)
   }
 })

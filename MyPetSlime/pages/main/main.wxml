@@ -1,4 +1,4 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" bindtap="activate">
   <canvas canvas-id="myCanvas" />
 </view>
