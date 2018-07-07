@@ -33,7 +33,7 @@ Page({
     let bodyFrame = 0
     let bodyAnimationFrameMax = bodyAnimation.animation.length
     let eyesFrame = 0
-    let eyesAnimationFrameMax = eyesAnimation.animation.length
+    let eyesAnimationFrameMax = eyesAnimation.animationLeft.length
     const ctx = wx.createCanvasContext('myCanvas')
     ctx.setFillStyle('black')
     ctx.clearRect(0, 0, 500, 500)
@@ -57,14 +57,17 @@ Page({
       ctx.fillRect((this.data.startLeft + body[i][0]) * pixelSize, (this.data.startTop + body[i][1]) * pixelSize, pixelSize, pixelSize)
     }
   },
+  // left+right eye
   drawEyes: function (ctx, eyesFrame, bodyFrame) {
     let eyesPos = bodyAnimation.eyes[bodyFrame]
-    let eyes = eyesAnimation.animation[eyesFrame]
+    let eyeLeft = eyesAnimation.animationLeft[eyesFrame]
+    let eyeRight = eyesAnimation.animationRight[eyesFrame]
     let pixelSize = this.data.pixelSize
-    for (let i = 0; i < eyesPos.length; i++) {
-      for (let j = 0; j < eyes.length; j++) {
-        ctx.fillRect((this.data.startLeft + (eyesPos[i][0] + eyes[j][0])) * pixelSize, (this.data.startTop + (eyesPos[i][1] + eyes[j][1])) * pixelSize, pixelSize, pixelSize)
-      }
+    for (let j = 0; j < eyeLeft.length; j++) {
+      ctx.fillRect((this.data.startLeft + (eyesPos[0][0] + eyeLeft[j][0])) * pixelSize, (this.data.startTop + (eyesPos[0][1] + eyeLeft[j][1])) * pixelSize, pixelSize, pixelSize)
+    }
+    for (let j = 0; j < eyeRight.length; j++) {
+      ctx.fillRect((this.data.startLeft + (eyesPos[1][0] + eyeRight[j][0])) * pixelSize, (this.data.startTop + (eyesPos[1][1] + eyeRight[j][1])) * pixelSize, pixelSize, pixelSize)
     }
   }
 })
