@@ -2,12 +2,37 @@
   "pages": [
     "pages/main/main",
     "pages/training/training",
-    "pages/Inventory/inventory"
+    "pages/inventory/inventory"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Slime",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/Battle_Selected.png",
+        "iconPath": "images/Battle.png",
+        "pagePath": "pages/main/main",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/Work_Selected.png",
+        "iconPath": "images/Work.png",
+        "pagePath": "pages/training/training",
+        "text": "打工"
+      },
+      {
+        "selectedIconPath": "images/Inventory_Selected.png",
+        "iconPath": "images/Inventory.png",
+        "pagePath": "pages/inventory/inventory",
+        "text": "背包"
+      }
+    ]
   }
 }
