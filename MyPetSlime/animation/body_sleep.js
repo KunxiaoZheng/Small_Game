@@ -46,8 +46,8 @@ let animation = [frame1,
                  frame2,
                  frame2]
 
-let eyesFrame1 = [[9, 11], [21, 11]]
-let eyesFrame2 = [[9, 12], [21, 12]]
+let eyesFrame1 = [[9, 12], [21, 12]]
+let eyesFrame2 = [[9, 13], [21, 13]]
 let eyes = [eyesFrame1,
             eyesFrame1,
             eyesFrame1,

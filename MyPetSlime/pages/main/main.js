@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 let bodyAnimation = require('../../animation/body_sleep.js')
-let eyesAnimation = require('../../animation/eyes_happy.js')
+let eyesAnimation = require('../../animation/eyes_sleep.js')
 
 Page({
   data: {
@@ -84,7 +84,7 @@ Page({
     let _this = this
     setTimeout(function() {
       bodyAnimation = require('../../animation/body_sleep.js')
-      eyesAnimation = require('../../animation/eyes_sleep.js')
+      eyesAnimation = require('../../animation/eyes_happy.js')
       _this.setData({
         bodyAnimationFrameMax: bodyAnimation.animation.length,
         eyesAnimationFrameMax: eyesAnimation.animationLeft.length
