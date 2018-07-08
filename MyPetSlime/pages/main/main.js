@@ -72,7 +72,7 @@ Page({
       ctx.fillRect((this.data.startLeft + (eyesPos[1][0] + eyeRight[j][0])) * pixelSize, (this.data.startTop + (eyesPos[1][1] + eyeRight[j][1])) * pixelSize, pixelSize, pixelSize)
     }
   },
-  activate: function() {
+  activate: function () {
     bodyAnimation = require('../../animation/body_idle.js')
     eyesAnimation = require('../../animation/eyes_idle.js')
     this.setData({

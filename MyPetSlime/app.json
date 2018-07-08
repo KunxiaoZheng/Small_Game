@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/main/main",
     "pages/training/training",
+    "pages/main/main",
     "pages/inventory/inventory",
     "pages/map/map",
     "pages/battle/battle"
