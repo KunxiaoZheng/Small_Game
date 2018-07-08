@@ -3,6 +3,7 @@
 const app = getApp()
 let bodyAnimation = require('../../animation/body_sleep.js')
 let eyesAnimation = require('../../animation/eyes_sleep.js')
+let timeout = null
 
 Page({
   data: {
@@ -72,7 +73,7 @@ Page({
       ctx.fillRect((this.data.startLeft + (eyesPos[1][0] + eyeRight[j][0])) * pixelSize, (this.data.startTop + (eyesPos[1][1] + eyeRight[j][1])) * pixelSize, pixelSize, pixelSize)
     }
   },
-  activate: function () {
+  activate: function() {
     bodyAnimation = require('../../animation/body_idle.js')
     eyesAnimation = require('../../animation/eyes_idle.js')
     this.setData({
@@ -80,13 +81,16 @@ Page({
       eyesAnimationFrameMax: eyesAnimation.animationLeft.length
     })
     let _this = this
-    setTimeout(function() {
-      bodyAnimation = require('../../animation/body_sleep.js')
-      eyesAnimation = require('../../animation/eyes_happy.js')
-      _this.setData({
-        bodyAnimationFrameMax: bodyAnimation.animation.length,
-        eyesAnimationFrameMax: eyesAnimation.animationLeft.length
-      })
-    }, 3000)
+    if (!timeout) {
+      timeout = setTimeout(function () {
+        bodyAnimation = require('../../animation/body_sleep.js')
+        eyesAnimation = require('../../animation/eyes_happy.js')
+        _this.setData({
+          bodyAnimationFrameMax: bodyAnimation.animation.length,
+          eyesAnimationFrameMax: eyesAnimation.animationLeft.length
+        })
+        timeout = null
+      }, 3000)
+    }
   }
 })
