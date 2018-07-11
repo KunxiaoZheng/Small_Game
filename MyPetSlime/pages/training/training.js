@@ -3,9 +3,13 @@
 let bodyAnimation = require('../../animation/body_idle.js')
 let eyesAnimation = require('../../animation/eyes_happy.js')
 let actionAnimation = require('../../animation/mining.js')
+let interval = null
 Page({
   data: {
     selected: 'gold',
+    idle: true,
+    seconds: 2,
+    time: "",
     hp: 100,
     str: 50,
     def: 20,
@@ -50,6 +54,15 @@ Page({
         that.height = res.windowHeight
       }
     })
+    if (!this.data.idle) {
+      interval = setInterval(function () {
+        if (that.data.seconds === 0) clearInterval(interval)
+        that.setData({
+          time: that.dateformat(that.data.seconds),
+          seconds: that.data.seconds - 1
+        })
+      }, 1000)
+    }
   },
   onReady: function () {
     let pixelSize = this.width / 80
@@ -114,5 +127,14 @@ Page({
     for (let i = 0; i < action.length; i++) {
       ctx.fillRect((this.data.startLeft + action[i][0]) * pixelSize, (this.data.startTop + action[i][1]) * pixelSize, pixelSize, pixelSize)
     }
+  },
+  dateformat: function (second) {
+    // 小时位
+    var hr = Math.floor(second / 3600);
+    // 分钟位
+    var min = Math.floor((second - hr * 3600) / 60);
+    // 秒位
+    var sec = (second - hr * 3600 - min * 60);// equal to => var sec = second % 60;
+    return hr + "小时" + min + "分钟" + sec + "秒";
   }
 })

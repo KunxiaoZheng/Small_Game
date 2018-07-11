@@ -6,7 +6,7 @@
     bindtap="select" data-type="stat">属性</span>
 </view>
 <view class="panel">
-  <view class="panel_data" wx:if="{{selected=='gold'}}">
+  <view class="panel_data" wx:if="{{selected=='gold'&&idle}}">
     <view class="panel_data_left panel_data_gold_left">
       <view class="data">
         <span>体力: {{hp}}</span>
@@ -24,7 +24,7 @@
       </view>
     </view>
   </view>
-  <view class="panel_data" wx:if="{{selected=='stat'}}">
+  <view class="panel_data" wx:if="{{selected=='stat'&&idle}}">
     <view class="panel_data_left panel_data_stat_left">
       <view class="data">
         <span>体力: {{hp}}</span>
@@ -48,7 +48,12 @@
       </view>
     </view>
   </view>
-  <view class="btn">
+  <view class="panel_data" wx:if="{{!idle}}">
+    <view class="timer">
+      <text>{{time}}</text>
+    </view>
+  </view>
+  <view class="btn" wx:if="{{idle}}">
     开始
   </view>
 </view>
