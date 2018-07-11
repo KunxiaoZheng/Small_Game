@@ -16,6 +16,28 @@ Page({
     this.setData({
       selected: e.currentTarget.dataset.type
     })
+    switch(this.data.selected) {
+      case 'gold': 
+        bodyAnimation = require('../../animation/body_idle.js')
+        eyesAnimation = require('../../animation/eyes_happy.js')
+        actionAnimation = require('../../animation/mining.js')
+        this.setData({
+          bodyAnimationFrameMax: bodyAnimation.animation.length,
+          eyesAnimationFrameMax: eyesAnimation.animationLeft.length,
+          actionAnimationFrameMax: actionAnimation.animation.length
+        })
+        break
+      case 'stat':
+        bodyAnimation = require('../../animation/body_attack.js')
+        eyesAnimation = require('../../animation/eyes_idle.js')
+        actionAnimation = null
+
+        this.setData({
+          bodyAnimationFrameMax: bodyAnimation.animation.length,
+          eyesAnimationFrameMax: eyesAnimation.animationLeft.length
+        })
+        break
+    }
   },
 
   onLoad: function (options) {
@@ -86,6 +108,7 @@ Page({
     }
   },
   drawAction: function (ctx, actionFrame) {
+    if (actionAnimation == null) return
     let action = actionAnimation.animation[actionFrame]
     let pixelSize = this.data.pixelSize
     for (let i = 0; i < action.length; i++) {
