@@ -7,8 +7,8 @@ let interval = null
 Page({
   data: {
     selected: 'gold',
-    idle: true,
-    seconds: 2,
+    idle: false,
+    seconds: 5,
     time: "",
     hp: 100,
     str: 50,
@@ -136,5 +136,25 @@ Page({
     // 秒位
     var sec = (second - hr * 3600 - min * 60);// equal to => var sec = second % 60;
     return hr + "小时" + min + "分钟" + sec + "秒";
+  },
+  train: function () {
+    this.setData({
+      idle: false,
+      seconds: 5,
+      time: this.dateformat(5)
+    })
+    var that = this;
+    interval = setInterval(function () {
+      if (that.data.seconds === 0) clearInterval(interval)
+      that.setData({
+        time: that.dateformat(that.data.seconds),
+        seconds: that.data.seconds - 1
+      })
+    }, 1000)
+  },
+  close: function () {
+    this.setData({
+      idle: true
+    })
   }
 })

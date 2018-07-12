@@ -109,3 +109,11 @@ canvas {
   background-color: white;
   border-radius: 10px;
 }
+
+.btn1 {
+  left: 180rpx;
+}
+
+.btn2 {
+  right: 180rpx;
+}
