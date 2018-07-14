@@ -1,10 +1,12 @@
 Page({
   data: {
-    opponent: ''
+    opponent: "",
+    name: ""
   },
   onLoad: function (options) {
     this.setData({
-      opponent: options.opponent
+      opponent: options.opponent,
+      name: options.name
     })
   }
 })

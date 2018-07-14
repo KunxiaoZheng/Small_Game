@@ -1,6 +1,6 @@
 <scroll-view scroll-y="true" class="list">
   <view class="list-item" wx:for="{{opponents}}" wx:key="key">
-    <view class="panel_enemy" data-type="{{item.id}}" bindtap="battle">
+    <view class="panel_enemy" data-type="{{item.id}}" data-name="{{item.name}}" bindtap="battle">
       <image class="panel_enemy_info panel_enemy_icon" src="{{item.icon}}" mode="aspectFit"></image>
       <view class="panel_enemy_info panel_enemy_name">{{item.name}}</view>
       <view class="panel_enemy_info panel_enemy_stat">战力: {{item.battlePoint}}</view>

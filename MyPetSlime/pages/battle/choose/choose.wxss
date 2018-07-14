@@ -16,7 +16,7 @@ page {
   border: 1px solid tomato;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 2px 0 gray;
+  box-shadow: 1px 1px 3px 0 gray;
 }
 
 .panel_enemy {

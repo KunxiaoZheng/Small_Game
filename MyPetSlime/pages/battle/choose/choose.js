@@ -51,7 +51,7 @@ Page({
   },
   battle: function(e) {
     wx.navigateTo({
-      url: '../battle/battle?opponent=' + e.currentTarget.dataset.type,
+      url: '../battle/battle?opponent=' + e.currentTarget.dataset.type + "&name=" + e.currentTarget.dataset.name,
     })
   }
 })

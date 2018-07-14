@@ -1,1 +1,2 @@
-<text>Fighting {{opponent}}</text>
+<text class="title">正在挑战 {{name}}</text>
+<canvas canvas-id="myCanvas" />
