@@ -7,9 +7,11 @@ let interval = null
 Page({
   data: {
     selected: 'gold',
-    idle: false,
+    idle: true,
     seconds: 5,
     time: "",
+    action: "gold",
+    goldEarned: 120,
     hp: 100,
     str: 50,
     def: 20,
@@ -55,13 +57,22 @@ Page({
       }
     })
     if (!this.data.idle) {
-      interval = setInterval(function () {
-        if (that.data.seconds === 0) clearInterval(interval)
-        that.setData({
-          time: that.dateformat(that.data.seconds),
-          seconds: that.data.seconds - 1
-        })
-      }, 1000)
+      if (this.data.action == "stat") {
+        interval = setInterval(function () {
+          if (that.data.seconds === 0) clearInterval(interval)
+          that.setData({
+            time: that.dateformat(that.data.seconds),
+            seconds: that.data.seconds - 1
+          })
+        }, 1000)
+      } else if (this.data.action == "gold") {
+        console.log(1)
+        interval = setInterval(function () {
+          that.setData({
+            goldEarned: that.data.goldEarned + 2,
+          })
+        }, 250)
+      }
     }
   },
   onReady: function () {
@@ -138,23 +149,38 @@ Page({
     return hr + "小时" + min + "分钟" + sec + "秒";
   },
   train: function () {
-    this.setData({
-      idle: false,
-      seconds: 5,
-      time: this.dateformat(5)
-    })
-    var that = this;
-    interval = setInterval(function () {
-      if (that.data.seconds === 0) clearInterval(interval)
-      that.setData({
-        time: that.dateformat(that.data.seconds),
-        seconds: that.data.seconds - 1
+    if (this.data.selected == "stat") {
+      this.setData({
+        idle: false,
+        seconds: 5,
+        time: this.dateformat(5),
+        action: this.data.selected
       })
-    }, 1000)
+      var that = this;
+      interval = setInterval(function () {
+        if (that.data.seconds === 0) clearInterval(interval)
+        that.setData({
+          time: that.dateformat(that.data.seconds),
+          seconds: that.data.seconds - 1
+        })
+      }, 1000)
+    } else if (this.data.selected == "gold") {
+      this.setData({
+        idle: false,
+        action: this.data.selected
+      })
+      var that = this;
+      interval = setInterval(function () {
+        that.setData({
+          goldEarned: that.data.goldEarned + 2
+        })
+      }, 250)
+    }
   },
   close: function () {
     this.setData({
       idle: true
     })
+    clearInterval(interval)
   }
 })
