@@ -1,2 +1,10 @@
 <text class="title">正在挑战 {{name}}</text>
+<view class="healthBar" style="left: 20px;">
+  <view>{{enemyHp}}/{{enemyMaxHp}}</view>
+  <view class="healthBar_bar" style="width: {{enemyHp/enemyMaxHp*100}}%"></view>
+</view>
+<view class="healthBar" style="right: 20px;">
+  <view>{{hp}}/{{maxHp}}</view>
+  <view class="healthBar_bar" style="width: {{hp/maxHp*100}}%"></view>
+</view>
 <canvas canvas-id="myCanvas" />
