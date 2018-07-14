@@ -1,2 +1,65 @@
-<!--pages/battle/battle.wxml-->
-<text>pages/battle/battle.wxml</text>
+<scroll-view scroll-y="true" class="list">
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_green.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">小绿史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 10</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_green.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">中绿史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 50</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_green.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">大绿史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 100</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_green.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">巨大绿史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 200</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_red.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">小红史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 20</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_red.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">中红史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 100</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_red.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">大红史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 200</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_red.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">巨大红史莱姆</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 400</view>
+    </view>
+  </view>
+  <view class="list-item">
+    <view class="panel_enemy">
+      <image class="panel_enemy_info panel_enemy_icon" src="images/slime_red.png" mode="aspectFit"></image>
+      <view class="panel_enemy_info panel_enemy_name">史莱姆王</view>
+      <view class="panel_enemy_info panel_enemy_stat">战力: 2000</view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/battle/battle",
     "pages/main/main",
     "pages/training/training",
     "pages/inventory/inventory",
-    "pages/map/map",
-    "pages/battle/battle"
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
