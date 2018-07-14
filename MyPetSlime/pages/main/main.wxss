@@ -35,6 +35,7 @@ canvas {
   left: -50rpx;
   top: 0;
   transition: top 0.5s ease, left 0.5s ease;
+  
 }
 
 .expand .btn:nth-child(1) {
