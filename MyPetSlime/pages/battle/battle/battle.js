@@ -1,5 +1,6 @@
 let bodyAnimation = require('../../../animation/body_attack.js')
 let eyesAnimation = require('../../../animation/eyes_idle.js')
+let interval
 Page({
   data: {
     opponent: "",
@@ -39,7 +40,7 @@ Page({
     ctx.setFillStyle('black')
     ctx.clearRect(0, 0, 500, 500)
     let _this = this
-    setInterval(function () {
+    interval = setInterval(function () {
       ctx.drawImage('../choose/images/slime_green.png', 0, 200, 150, 110)
       bodyFrame = bodyFrame % _this.data.bodyAnimationFrameMax
       eyesFrame = eyesFrame % _this.data.eyesAnimationFrameMax
@@ -49,18 +50,32 @@ Page({
       // draw eyes
       _this.drawEyes(ctx, eyesFrame, bodyFrame)
 
-      ctx.draw()
       if (bodyFrame === 3) {
         _this.setData({
           enemyHp: Math.max(_this.data.enemyHp - 1, 0),
           hp: Math.max(_this.data.hp -1, 0)
         })
         if (_this.data.enemyHp <= 0) {
+          clearInterval(interval)
           console.log("战斗结束 赢")
         } else if (_this.data.hp <= 0) {
+          clearInterval(interval)
           console.log("战斗结束 输")
         }
       }
+
+      if (bodyFrame == 2) {
+        let timer = 0
+        let dmgInterval = setInterval(function () {
+          ctx.setFontSize(20)
+          ctx.fillText(-1, 50, 200 - 10 * timer)
+          ctx.fillText(-1, 200, 200 - 10 * timer)
+          timer++
+          if (timer === 10) clearInterval(dmgInterval)
+        }, 600)
+      }
+
+      ctx.draw()
       bodyFrame = bodyFrame + 1
       eyesFrame = eyesFrame + 1
     }, 600)
