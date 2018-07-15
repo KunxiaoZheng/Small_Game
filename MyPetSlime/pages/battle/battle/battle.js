@@ -50,15 +50,20 @@ Page({
       _this.drawEyes(ctx, eyesFrame, bodyFrame)
 
       ctx.draw()
+      if (bodyFrame === 3) {
+        _this.setData({
+          enemyHp: Math.max(_this.data.enemyHp - 1, 0),
+          hp: Math.max(_this.data.hp -1, 0)
+        })
+        if (_this.data.enemyHp <= 0) {
+          console.log("战斗结束 赢")
+        } else if (_this.data.hp <= 0) {
+          console.log("战斗结束 输")
+        }
+      }
       bodyFrame = bodyFrame + 1
       eyesFrame = eyesFrame + 1
     }, 600)
-    setInterval(function() {
-      _this.setData({
-        hp: _this.data.hp - 1,
-        enemyHp: _this.data.enemyHp -1
-      })
-    }, 3000)
   },
 
   drawBody: function (ctx, bodyFrame) {
