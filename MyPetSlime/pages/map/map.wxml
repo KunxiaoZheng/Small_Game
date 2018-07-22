@@ -1,17 +1,17 @@
 <scroll-view scroll-y="true" class="list">
-  <view class="region" data-name="town" bindtap="goToPlace">
+  <view class="region {{town==true?'':'disabled'}}" data-name="town" bindtap="goToPlace">
     主城
   </view>
-  <view class="region" data-name="forest" bindtap="goToPlace">
+  <view class="region {{forest==true?'':'disabled'}}" data-name="forest" bindtap="goToPlace">
     史莱姆森林
   </view>
-  <view class="region disabled" data-name="sea">
+  <view class="region {{sea==true?'':'disabled'}}" data-name="sea" bindtap="goToPlace">
     海世界
   </view>
-  <view class="region disabled" data-name="volcano">
+  <view class="region {{volcano==true?'':'disabled'}}" data-name="volcano" bindtap="goToPlace">
     火山口
   </view>
-  <view class="region disabled" data-name="sky">
+  <view class="region {{sky==true?'':'disabled'}}" data-name="sky" bindtap="goToPlace">
     天空岛
   </view>
 </scroll-view>
