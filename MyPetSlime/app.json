@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/map/map",
     "pages/main/main",
     "pages/training/training",
     "pages/inventory/inventory",
-    "pages/map/map",
-    "pages/battle/battle"
+    "pages/battle/choose/choose",
+    "pages/battle/battle/battle"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +33,7 @@
       {
         "selectedIconPath": "images/Battle_Selected.png",
         "iconPath": "images/Battle.png",
-        "pagePath": "pages/battle/battle",
+        "pagePath": "pages/battle/choose/choose",
         "text": "战斗"
       },
       {

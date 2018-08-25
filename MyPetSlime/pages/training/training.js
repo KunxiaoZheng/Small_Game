@@ -7,9 +7,16 @@ let interval = null
 Page({
   data: {
     selected: 'gold',
+<<<<<<< HEAD
     idle: false,
     seconds: 0.1,
+=======
+    idle: true,
+    seconds: 5,
+>>>>>>> b28e76978dba1827e6d5d3a3f835e87768e01377
     time: "",
+    action: "gold",
+    goldEarned: 120,
     hp: 100,
     str: 50,
     def: 20,

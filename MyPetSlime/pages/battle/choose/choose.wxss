@@ -1,0 +1,45 @@
+page {
+  overflow-x: hidden;
+}
+
+.list {
+  height: 100%;
+  width: 105%;
+}
+
+.list-item {
+  width: calc(95% - 40rpx);
+  height: 100px;
+  line-height: 100px;
+  margin: 20rpx;
+  padding-right: 30rpx;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px 0 gray;
+}
+
+.panel_enemy {
+  font-size: 0;
+}
+
+.panel_enemy_info {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.panel_enemy_icon {
+  height: 100px;
+  width: 100px;
+}
+
+.panel_enemy_name {
+  font-size: 14px;
+}
+
+.panel_enemy_stat {
+  font-size: 18px;
+  color: tomato;
+  float: right;
+}

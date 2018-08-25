@@ -1,1 +1,17 @@
-/* pages/map/map.wxss */
+page { padding: 20rpx; box-sizing: border-box; }
+.list { width: calc(100% + 20px); height: 100%; }
+.region {
+  border: 1px solid silver;
+  border-radius: 10px;
+  width: calc(100% - 20px);
+  height: 100px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 3px 0 gray;
+  line-height: 100px;
+  text-align: center;
+  font-size: 22px;
+}
+.disabled {
+  background-color: rgb(230, 230, 230);
+}

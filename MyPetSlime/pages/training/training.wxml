@@ -48,12 +48,17 @@
       </view>
     </view>
   </view>
-  <view class="panel_data" wx:if="{{!idle && seconds >= 0}}">
+  <view class="panel_data" wx:if="{{!idle && seconds >= 0 && action == 'stat'}}">
     <view class="timer">
       <text>{{time}}</text>
     </view>
   </view>
-  <view class="panel_data" wx:if="{{!idle && seconds < 0}}">
+  <view class="panel_data" wx:if="{{!idle && action == 'gold'}}">
+    <view class="timer">
+      <text>+{{goldEarned}}金币</text>
+    </view>
+  </view>
+  <view class="panel_data" wx:if="{{!idle && seconds < 0 && action == 'stat'}}">
     <view class="timer">
       <view class="data">
         <span>体力: +1</span>
@@ -69,10 +74,13 @@
   <view class="btn" wx:if="{{idle}}" bindtap="train">
     开始
   </view>
-  <view class="btn btn1" wx:if="{{!idle && seconds < 0}}">
+  <view class="btn btn1" wx:if="{{!idle && seconds < 0 && action == 'stat'}}">
     鼓励
   </view>
-  <view class="btn btn2" wx:if="{{!idle && seconds < 0}}" bindtap="close">
+  <view class="btn btn2" wx:if="{{!idle && seconds < 0 && action == 'stat'}}" bindtap="close">
     关闭
+  </view>
+  <view class="btn" wx:if="{{!idle && action == 'gold'}}" bindtap="close">
+    取出
   </view>
 </view>

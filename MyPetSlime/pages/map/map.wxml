@@ -1,2 +1,17 @@
-<!--pages/map/map.wxml-->
-<text>pages/map/map.wxml</text>
+<scroll-view scroll-y="true" class="list">
+  <view class="region {{town==true?'':'disabled'}}" data-name="town" bindtap="goToPlace">
+    主城
+  </view>
+  <view class="region {{forest==true?'':'disabled'}}" data-name="forest" bindtap="goToPlace">
+    史莱姆森林
+  </view>
+  <view class="region {{sea==true?'':'disabled'}}" data-name="sea" bindtap="goToPlace">
+    海世界
+  </view>
+  <view class="region {{volcano==true?'':'disabled'}}" data-name="volcano" bindtap="goToPlace">
+    火山口
+  </view>
+  <view class="region {{sky==true?'':'disabled'}}" data-name="sky" bindtap="goToPlace">
+    天空岛
+  </view>
+</scroll-view>
