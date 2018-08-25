@@ -8,7 +8,7 @@ Page({
   data: {
     selected: 'gold',
     idle: false,
-    seconds: 5,
+    seconds: 0.1,
     time: "",
     hp: 100,
     str: 50,
